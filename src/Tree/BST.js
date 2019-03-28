@@ -61,4 +61,78 @@ class BST {
 		order(node)
 		return array;
 	}
+	
+	/**
+	 * 先序遍历
+	 * @return {Array} 遍历结果数组
+	 */
+	preOrder() {
+		let node = this.root
+		let array = [];
+		function order(node){
+			if(!(node === null)) {
+				array.push(node.value);
+				order(node.left);
+				order(node.right);
+			}
+		}
+		order(node)
+		return array;
+	}
+	
+	/**
+	 * 后序遍历
+	 * @return {Array} 遍历结果数组
+	 */
+	postOrder() {
+		let node = this.root
+		let array = [];
+		function order(node){
+			if(!(node === null)) {
+				order(node.left);
+				order(node.right);
+				array.push(node.value);
+			}
+		}
+		order(node)
+		return array;
+	}
+	
+	/**
+	 * 获取最小值
+	 * @return {Number} 最小值
+	 */
+	getMin() {
+		let curNode = this.root;
+		if(curNode === null) {
+			return
+		} else {
+			while(curNode) {
+				if(curNode.left === null) {
+					return curNode.value;
+				} else {
+					curNode = curNode.left;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * 获取最大值
+	 * @return {Number} 最大值
+	 */
+	getMax() {
+		let curNode = this.root;
+		if(curNode === null) {
+			return
+		} else {
+			while(curNode) {
+				if(curNode.right === null) {
+					return curNode.value;
+				} else {
+					curNode = curNode.right;
+				}
+			}
+		}
+	}
 }
