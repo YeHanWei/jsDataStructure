@@ -11,7 +11,7 @@ class Node {
 /**
  * 单向链表
  */
-export default class{
+export default class UnidirectionalLinkedList{
   constructor(array) {
     this.head = null;   // 链表头指针
     this.length = 0;    // 链表长度
