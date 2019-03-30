@@ -147,7 +147,7 @@ export default class UnidirectionalLinkedList{
   shift() {
     let head = null;
     if (this.length === 0) {
-      throw new Error("Error! The UnidirectionalLinkedList is null.")
+      return;
     } else if (this.length === 1) {
       head = this.head;
       this.head = null;
