@@ -1,5 +1,7 @@
-
-export default class Stack {
+/**
+ * 栈
+ */
+class Stack {
   constructor() {
     this._pool = []
     this.size = 0;  // 栈的大小
@@ -7,7 +9,7 @@ export default class Stack {
 
   /**
    * 将元素压入栈中
-   * @param element 入栈的元素
+   * @param element{any} 入栈的元素
    */
   push(element) {
     this._pool.push(element);
@@ -52,3 +54,5 @@ export default class Stack {
     this.size = 0;
   }
 }
+
+export default Stack

@@ -184,9 +184,9 @@ export default class BST {
           }
         } else {  // 如果要删除的节点不是根节点
           if(!curNode.right) {  // 要删除的节点没有右子树
-            if(curNode.value < previous.value) {
+            if(curNode.value < previous.value) { //当前节点是父节点的左子节点
               previous.left = curNode.left;
-            } else {
+            } else {														// 当前节点是父节点的右子节点
               previous.right = curNode.left;
             }
             curNode.left = null;

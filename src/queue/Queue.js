@@ -3,7 +3,7 @@ import UnidirectionalLinkedList from '../linkedList/UnidirectionalLinkedList'
 /**
  * 队列（单向链表实现）
  */
-export default class Queue {
+class Queue {
   constructor() {
     this._queue = new UnidirectionalLinkedList();
     this.size = 0;
@@ -11,7 +11,7 @@ export default class Queue {
 
   /**
    * 在队尾添加元素
-   * @param element 添加到队尾的元素
+   * @param element{any} 添加到队尾的元素
    */
   enqueue(element) {
     this._queue.push(element);
@@ -20,7 +20,7 @@ export default class Queue {
 
   /**
    * 取出队列第一个元素
-   * @return {*} 第一个元素的值，若队列为空，返回undefined
+   * @return {any} 第一个元素的值，若队列为空，返回undefined
    */
   dequeue() {
     let node = this._queue.shift();
@@ -59,3 +59,5 @@ export default class Queue {
     return this._queue.toArray();
   }
 }
+
+export default Queue

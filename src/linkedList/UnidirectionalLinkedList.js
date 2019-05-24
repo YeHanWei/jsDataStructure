@@ -11,7 +11,7 @@ class Node {
 /**
  * 单向链表
  */
-export default class UnidirectionalLinkedList{
+class UnidirectionalLinkedList{
   constructor(array) {
     this.head = null;   // 链表头指针
     this.length = 0;    // 链表长度
@@ -24,7 +24,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 向链表末尾添加节点
-   * @param value 新节点的内容
+   * @param value{any} 新节点的内容
    */
   push(value) {
     let node = new Node(value);
@@ -44,7 +44,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 向链表头部添加节点
-   * @param value 节点内容
+   * @param value{any} 节点内容
    */
   unshift(value) {
     let node = new Node(value); // 新建节点
@@ -60,8 +60,8 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 在某索引位置插入节点
-   * @param value 节点内容
-   * @param index 索引
+   * @param value{any} 节点内容
+   * @param index{Number} 索引
    */
   insertAtIndex(value, index) {
     let node = new Node(value);
@@ -84,8 +84,8 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 替换某索引位置节点的内容
-   * @param value
-   * @param index
+   * @param value{any} 替换换内容
+   * @param index{Number} 索引
    */
   replaceAtInedx(value, index) {
     if (index < 0 || index >= this.length) {
@@ -101,7 +101,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 获取索引位置节点内容
-   * @param index 索引
+   * @param index{Number} 索引
    * @return {*} 节点内容value
    */
   getValueByIndex(index) {
@@ -165,7 +165,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 移除索引位置的节点
-   * @param index 索引位置
+   * @param index{Number} 索引位置
    */
   removeByIndex(index) {
     if(index < 0 || index >= this.length) {
@@ -190,7 +190,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 移除指定内容的节点
-   * @param value 值
+   * @param value{any} 值
    */
   removeByValue(value) {
     if(this.length === 0) {
@@ -228,8 +228,8 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 截取子链表
-   * @param startIndex 子链表开始位置索引
-   * @param endIndex 子链表结束位置索引
+   * @param startIndex{Number} 子链表开始位置索引
+   * @param endIndex{Number} 子链表结束位置索引
    */
   subLinkedList(startIndex, endIndex) {
     if (startIndex < 0 || startIndex >= this.length) {
@@ -274,7 +274,7 @@ export default class UnidirectionalLinkedList{
 
   /**
    * 将数组转换为链表（静态方法）
-   * @param arr 待转换的数组
+   * @param arr{Array} 待转换的数组
    * @return {UnidirectionalLinkedList} 转换后的结果
    */
   static makeArrayToList(arr) {
@@ -286,3 +286,4 @@ export default class UnidirectionalLinkedList{
   }
 }
 
+export default UnidirectionalLinkedList
